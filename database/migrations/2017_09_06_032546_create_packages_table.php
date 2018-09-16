@@ -24,7 +24,7 @@ class CreatePackagesTable extends Migration
     {
         Schema::create('packages', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('team_id');
+            $table->unsignedInteger('team_id')->nullable();
             $table->string('name');
             $table->string('slug')->unique();
             $table->string('author')->nullable();
